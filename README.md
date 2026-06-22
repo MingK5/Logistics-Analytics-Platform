@@ -1,6 +1,6 @@
 # Event-Driven Logistics Analytics Platform
 
-A portfolio-grade software and data engineering project built using the Olist Brazilian E-Commerce dataset.
+A portfolio-grade software and data engineering project built using the Olist Brazilian E-Commerce dataset (Source: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
 
 The platform converts historical e-commerce records into a replayable event stream and simulates a real-time logistics environment using RabbitMQ, PostgreSQL, MongoDB, FastAPI, Angular, and Spark.
 
