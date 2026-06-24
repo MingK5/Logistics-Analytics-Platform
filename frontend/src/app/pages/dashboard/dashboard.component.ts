@@ -8,7 +8,7 @@ import { ApiService } from '../../services/api.service';
   imports: [CommonModule],
   template: `
   <div class="container">
-    <h1>Manager Dashboard</h1>
+    <h1>Overview Dashboard</h1>
     <div class="grid" *ngIf="summary">
       <div class="card"><h3>Total Orders</h3><h2>{{summary.total_orders || 0}}</h2></div>
       <div class="card"><h3>Delivered</h3><h2>{{summary.delivered_orders || 0}}</h2></div>

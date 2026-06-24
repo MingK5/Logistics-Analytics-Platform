@@ -13,7 +13,7 @@ import { ApiService } from '../../services/api.service';
       <table>
         <tr><th>Event Time</th><th>Type</th><th>Order ID</th></tr>
         <tr *ngFor="let e of events">
-          <td>{{e.event_time}}</td><td><span class="badge">{{e.event_type}}</span></td><td>{{e.order_id}}</td>
+          <td>{{e.event_time}}</td><td><span class="badge">{{formatLabel(e.event_type)}}</span></td><td>{{e.order_id}}</td>
         </tr>
       </table>
     </div>
@@ -24,4 +24,12 @@ export class LiveEventsComponent implements OnInit {
   constructor(private api: ApiService) {}
   ngOnInit(): void { this.load(); setInterval(() => this.load(), 2000); }
   load(): void { this.api.getLiveEvents(80).subscribe(x => this.events = x || []); }
+  formatLabel(value: string): string {
+    if (!value) return '';
+    return value
+      .toLowerCase()
+      .split('_')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+  }
 }

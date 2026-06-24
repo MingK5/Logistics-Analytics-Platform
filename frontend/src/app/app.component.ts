@@ -8,7 +8,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   template: `
     <nav class="nav">
       <strong>Logistics Analytics</strong>
-      <a routerLink="/dashboard">Manager Dashboard</a>
+      <a routerLink="/dashboard">Dashboard</a>
       <a routerLink="/live-events">Live Events</a>
       <a routerLink="/orders">Order Tracking</a>
       <a routerLink="/sellers">Seller Performance</a>
